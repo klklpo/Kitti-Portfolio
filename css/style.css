@@ -177,6 +177,32 @@ h5 {
 /* headr
 ==================================================*/
 
+.new-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.new-menu {
+    display: flex;
+    gap: 24px;
+}
+
+
+.new-menu a {
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+
+.new-menu a:hover {
+    text-decoration: none;
+    color: rgba(255, 191, 0, 0.8);
+}
+
 .box-header {
     position: absolute;
     top: 0;
@@ -537,12 +563,62 @@ b i:last-child {
     position: relative;
 }
 
+.myhero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 76px);
+}
+
+.myhero p{
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+#myTextHero{
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 130px;
+    color: #393939;
+    text-transform: uppercase;
+}
+
 .box-words-wrapper b {
     display: inline-block;
     position: absolute;
     white-space: nowrap;
     left: 0;
     top: 0;
+    border: 10px solid green;
+}
+
+.fade-in {
+    animation: fade-in 0.5s both;
+}
+
+.fade-out {
+    animation: fade-out 0.5s both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .box-words-wrapper b.is-visible {

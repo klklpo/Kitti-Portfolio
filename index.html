@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Box personal portfolio Template</title>
+    <title>Portfolio</title>
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -43,53 +43,39 @@
 
     <div class="container-fluid">
         <!-- box header -->
-        <header class="box-header">
+        <header class="new-header">
             <div class="box-logo">
                 <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
+            <div class="new-menu">
+                <a>Work</a>
+                <a>About</a>
+                <a>Contact</a>
+            </div>
             <!-- box-primary-nav-trigger -->
         </header>
         <!-- end box header -->
 
-        <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label">About me</li>
-
-                <li><a href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="services.html">services</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact me</a></li>
-
-
-
-                <li class="box-label">Follow me</li>
-
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
-            </ul>
-        </nav>
-        <!-- end nav -->
-
         <!-- box-intro -->
-        <section class="box-intro">
-            <div class="table-cell">
+        <section class="box-intro myhero">
+
+            <h1 class="test-fade" id="myTextHero">UX Design</h1>
+            <p>EVERYTHING YOU NEED</p>
+            <!-- <h1>ui design.</h1>
+            <h1>graphic.</h1> -->
+
+
+            <!-- <div class="table-cell">
                 <h1 class="box-headline letters rotate-2">
                     <span class="box-words-wrapper">
-                        <b class="is-visible">design.</b>
-                        <b>&nbsp;coding.</b>
-                        <b>graphic.</b>
+                        <b class="is-visible">ux_design.</b>
+                        <b class="is-visible">ui design.</b>
+                        <b class="is-visible">graphic.</b>
                     </span>
 		        </h1>
                 <h5>everything you need</h5>
-            </div>
+            </div> -->
 
             <div class="mouse">
                 <div class="scroll"></div>
@@ -293,6 +279,39 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
+
+    <script lang="js">
+            let textHero = document.getElementById("myTextHero");
+            console.log(textHero)
+            setInterval(() => {
+                if(textHero.innerHTML == "UX Design") {
+
+                    textHero.className = "fade-out";
+
+                    setTimeout(() => {
+                        textHero.innerHTML = "UI Design"
+                        textHero.className = "fade-in";
+                    },500)
+
+                    
+
+                } else if (textHero.innerHTML == "UI Design") {
+                    textHero.className = "fade-out";
+
+                    setTimeout(() => {
+                        textHero.innerHTML = "Design Thinking"
+                        textHero.className = "fade-in";
+                    },500)
+                } else {
+                    textHero.className = "fade-out";
+
+                    setTimeout(() => {
+                        textHero.innerHTML = "UX Design"
+                        textHero.className = "fade-in";
+                    },500)
+                }
+            },5000)
+    </script>
 
 </body>
 
