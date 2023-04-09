@@ -179,9 +179,10 @@ h5 {
 
 .new-header {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-between !important;
+    width: 100% !important;
     align-items: center;
+    padding: 20px;
 }
 
 .new-menu {
@@ -251,7 +252,6 @@ h5 {
 }
 
 .box-logo {
-    display: block;
     padding: 20px;
 }
 
